@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎬 Sareh's Cinema World</title>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="curtain-overlay">
+        <div class="curtain-left"></div>
+        <div class="curtain-right"></div>
+    </div>
+    <script>
+        window.addEventListener('load', function() {
+            const curtain = document.getElementById('curtain-overlay');
+            setTimeout(function() {
+                curtain.classList.add('hidden');
+            }, 500); 
+        });
+    </script>
+</body>
+</html>
+    <header>
+        <h1 class="theater-name">✨ SARAH'S CINEMA ✨</h1>
+        <div class="marquee">
+          <p>WELCOME TO SARAH'S THEATER • ENJOY THE MOVIE • DON'T FORGET YOUR POPCORN! 🍿</p>
+        <div class="spotlight top-left-light"></div>
+        <div class="spotlight top-right-light"></div>
+        </div>
+    </header>
+    <main>
+        <section class="screen-section">
+            <div class="screen-frame">
+                <video id="myVideo" controls>
+                    <source src="media/trailer.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+            <div class="light-bar">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </section>
+
+        <section class="button-group">
+            <button class="btn replay" onclick="restartVideo()">🔄 Play Again</button>
+            <button class="btn rate" onclick="giveRating()">⭐ Rate Movie</button>
+        </section>
+    </main>
+    <section class="cinema-about bottom-text">
+    <h2>🍿 Welcome to the Cinema World</h2>
+    <p>
+        Turn off the lights, grab your popcorn, and let the movie take you on a journey.<br>
+        Every film is a new story, every scene a new emotion.
+    </p>
+    </section>
+
+    <footer>
+        <p> Assignment 3 - Prepared ❤️by Sarah | January 2026🎥</p>
+    </footer>
+
+    <script>
+        function restartVideo() {
+            const v = document.getElementById('myVideo');
+            v.currentTime = 0;
+            v.play();
+        }
+        function giveRating() {
+            alert("Thank you for your rating! 😍🍿");
+        }
+    </script>
+</body>
+</html>
